@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>郭奕炫 | 嵌入式软件工程师 · 作品集</title>
+  <meta name="description" content="郭奕炫 2027 届本科，嵌入式软件 / 物联网嵌入式方向：六足 AI 救援机器人（STM32H750 + ESP32-S3 + Cat.1 4G + 阿里云）全国总决赛二等奖，另有传感器音响与结构仿真项目。">
+  <meta name="author" content="郭奕炫">
+  <meta name="theme-color" content="#060a12">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="郭奕炫 | 嵌入式软件工程师 · 作品集">
+  <meta property="og:description" content="STM32 · ESP32-S3 · FreeRTOS · Cat.1 4G 联网 · 阿里云平台 · 全国大学生物联网设计竞赛全国总决赛二等奖">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2032%2032'%3E%3Crect%20width='32'%20height='32'%20rx='8'%20fill='%23060a12'/%3E%3Cpath%20d='M16%206l8.7%205v10L16%2026l-8.7-5V11z'%20fill='none'%20stroke='%2338e0d0'%20stroke-width='2'/%3E%3Ccircle%20cx='16'%20cy='16'%20r='2.6'%20fill='%2338e0d0'/%3E%3C/svg%3E">
+  <script>document.documentElement.classList.add("js");</script>
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">跳到主要内容</a>
+
+  <!-- 背景层：渐变 + 网格 + 粒子网络 -->
+  <div class="bg" aria-hidden="true">
+    <div class="bg-glow bg-glow-a"></div>
+    <div class="bg-glow bg-glow-b"></div>
+    <div class="bg-glow bg-glow-c"></div>
+    <div class="bg-grid"></div>
+    <canvas id="net" class="bg-net"></canvas>
+    <div class="bg-noise"></div>
+  </div>
+
+  <div class="progress" aria-hidden="true"><span id="progressBar"></span></div>
+
+  <header class="nav" id="nav">
+    <div class="wrap nav-inner">
+      <a class="brand" href="#top">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span class="brand-text">郭奕炫<span class="brand-sub">嵌入式 · 作品集</span></span>
+      </a>
+      <nav class="nav-links" id="navLinks" aria-label="页面导航">
+        <a href="#projects">项目</a>
+        <a href="#gallery">实拍</a>
+        <a href="#skills">技能</a>
+        <a href="#honors">荣誉</a>
+        <a href="#contact">联系</a>
+      </nav>
+      <div class="nav-actions">
+        <a class="btn btn-sm btn-primary" href="assets/resume/embedded.pdf" download>下载简历</a>
+        <button class="burger" id="burger" type="button" aria-label="展开菜单" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- ================= 首屏 ================= -->
+    <section class="hero" id="top">
+      <div class="wrap hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow reveal">
+            <span class="dot"></span>2027 届 · 广东技术师范大学 · 新能源汽车工程（师范）
+          </p>
+          <h1 class="hero-name reveal">郭奕炫</h1>
+          <p class="hero-role reveal">
+            <span class="role-rotator" id="roleRotator">
+              <span class="role is-on">嵌入式软件工程师</span>
+              <span class="role">物联网嵌入式开发</span>
+              <span class="role">消费电子 · 智能硬件</span>
+              <span class="role">汽车电子软件</span>
+            </span>
+          </p>
+          <p class="hero-lead reveal">
+            从 MCU 固件、4G 联网、云端平台，一路做到整机装配与结构验证。
+            做过一台拿全国二等奖的六足救援机器人，也自己动手搭过能跑的传感器音响。
+          </p>
+
+          <div class="hero-actions reveal">
+            <a class="btn btn-primary" href="#projects">
+              查看项目 <span class="arrow" aria-hidden="true">→</span>
+            </a>
+            <a class="btn btn-ghost" href="#contact">联系我</a>
+          </div>
+
+          <ul class="hero-facts reveal">
+            <li><b>专业排名</b>16 / 324（前 5%）</li>
+            <li><b>意向城市</b>广州 · 深圳 · 珠三角</li>
+            <li><b>求职方向</b>嵌入式软件 / 物联网 / 汽车电子</li>
+          </ul>
+        </div>
+
+        <div class="hero-visual reveal">
+          <div class="photo-stack">
+            <figure class="photo photo-main tilt">
+              <img src="assets/img/field-b.jpg" alt="六足救援机器人在室外草地跑动" width="900" height="472">
+              <figcaption><span>智巡六足 AI 救援机器人 · 室外多地形实测</span></figcaption>
+            </figure>
+            <figure class="photo photo-float photo-float-a tilt">
+              <img src="assets/img/robot-cloud.jpg" alt="阿里云操作页面与识别记录" width="650" height="428">
+            </figure>
+            <figure class="photo photo-float photo-float-b tilt">
+              <img src="assets/img/hero-field.jpg" alt="六足机器人在泥地上跑动" width="650" height="342">
+            </figure>
+            <span class="chip chip-float chip-1">STM32H750</span>
+            <span class="chip chip-float chip-2">ESP32-S3</span>
+            <span class="chip chip-float chip-3">Cat.1 4G · 阿里云</span>
+          </div>
+        </div>
+      </div>
+
+      <a class="scroll-hint" href="#stats" aria-label="向下滚动">
+        <span class="mouse" aria-hidden="true"></span>往下看
+      </a>
+    </section>
+
+    <!-- ================= 技术关键词滚动条 ================= -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-track">
+        <span>STM32F103 / H750</span><span>ESP32-S3</span><span>FreeRTOS</span><span>ESP-IDF</span>
+        <span>广和通 L610 Cat.1</span><span>UART 帧协议 · CRC16</span><span>TCP / UDP</span><span>阿里云部署</span>
+        <span>I2C / SPI</span><span>ADC · DMA · 定时器</span><span>看门狗</span><span>C / Python</span>
+        <span>Linux 系统开发</span><span>Keil5 · CubeIDE · VS Code</span><span>CATIA · ABAQUS</span><span>AI 辅助开发工作流</span>
+        <span>STM32F103 / H750</span><span>ESP32-S3</span><span>FreeRTOS</span><span>ESP-IDF</span>
+        <span>广和通 L610 Cat.1</span><span>UART 帧协议 · CRC16</span><span>TCP / UDP</span><span>阿里云部署</span>
+        <span>I2C / SPI</span><span>ADC · DMA · 定时器</span><span>看门狗</span><span>C / Python</span>
+        <span>Linux 系统开发</span><span>Keil5 · CubeIDE · VS Code</span><span>CATIA · ABAQUS</span><span>AI 辅助开发工作流</span>
+      </div>
+    </div>
+
+    <!-- ================= 数字条 ================= -->
+    <section class="stats" id="stats">
+      <div class="wrap stats-grid">
+        <div class="stat reveal">
+          <b class="stat-word">全国二等奖</b>
+          <span>第十三届全国大学生物联网设计竞赛 · 全国总决赛</span>
+        </div>
+        <div class="stat reveal">
+          <b class="count" data-to="4778" data-suffix=" 支">0</b>
+          <span>参赛队伍规模，晋级线下总决赛比例 6.2%</span>
+        </div>
+        <div class="stat reveal">
+          <b class="count" data-to="5" data-prefix="前 " data-suffix="%">0</b>
+          <span>专业排名 16 / 324</span>
+        </div>
+        <div class="stat reveal">
+          <b class="count" data-to="3" data-suffix=" 个">0</b>
+          <span>可展示的完整项目（嵌入式 2 个 + 结构 1 个）</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= 项目 ================= -->
+    <section class="section" id="projects">
+      <div class="wrap">
+        <header class="section-head reveal">
+          <p class="section-kicker">Selected Works</p>
+          <h2>做过的东西，都是真跑起来过的</h2>
+          <p class="section-sub">
+            三个项目对应三种能力：联网固件与云端、裸机外设与信号处理、结构建模与有限元分析。
+            每个项目后面都有实物照片、日志或图纸可以聊。
+          </p>
+        </header>
+
+        <!-- 项目 1 -->
+        <article class="project reveal">
+          <div class="project-media">
+            <button class="shot" type="button" data-full="assets/img/robot-field.jpg"
+                    data-cap="雷达自主避障顺序与草地、泥土、路沿多地形运行">
+              <img src="assets/img/robot-field.jpg" alt="六足机器人在草地、泥土和路沿多地形运行" loading="lazy">
+              <span class="shot-zoom" aria-hidden="true">点击放大</span>
+            </button>
+            <div class="shot-row">
+              <button class="shot shot-sm" type="button" data-full="assets/img/robot-assembly.jpg"
+                      data-cap="整机装配、内部布线与模块分层">
+                <img src="assets/img/robot-assembly.jpg" alt="整机装配与内部布线" loading="lazy">
+              </button>
+              <button class="shot shot-sm" type="button" data-full="assets/img/robot-cloud.jpg"
+                      data-cap="阿里云操作页面：风险告警、人员识别与位置记录">
+                <img src="assets/img/robot-cloud.jpg" alt="阿里云操作页面" loading="lazy">
+              </button>
+            </div>
+          </div>
+
+          <div class="project-body">
+            <p class="project-meta"><span class="badge">01</span>2026.04 – 2026.08 ｜ 4 人团队 · 通信与云端 ｜ 全国总决赛二等奖</p>
+            <h3>智巡六足 AI 救援机器人</h3>
+            <p class="project-desc">
+              主控 STM32H750 负责运动与外设，我用 ESP32-S3 做联网与云端这一路，把机器人、4G 模组和云平台串成完整链路。
+            </p>
+            <ul class="project-points">
+              <li><b>自定帧协议：</b>ESP32-S3 侧把串口收发、模组联网、日志拆成独立任务，定义 A5 5A 帧（JSON 报文 + CRC16 校验 + 序号判重 + 超时重同步），串口丢包问题靠逐档试波特率解决；</li>
+              <li><b>打通 4G 联网：</b>广和通 L610（Cat.1）的 ECM 模式怎么都握不上手，改走 USB RNDIS 打通；掉线后能自动清理失效业务、重新拿 IP 继续上报；</li>
+              <li><b>云端平台：</b>在阿里云部署后端与操作页面，控制指令、遥测数据、视频流三路分开走，视频花屏时改协议并让外设重新建链，用更大带宽压住错帧；</li>
+              <li><b>整机联调：</b>参与整机装配与结构件安装调试，18 路总线舵机、双 OV5640 视觉、激光雷达避障、北斗定位、可燃气体与温湿度气压传感器都在这套链路上跑通。</li>
+            </ul>
+            <ul class="chips">
+              <li>STM32H750</li><li>ESP32-S3</li><li>广和通 L610 Cat.1</li><li>ESP-IDF</li><li>FreeRTOS</li>
+              <li>UART 帧协议</li><li>CRC16</li><li>TCP / UDP</li><li>阿里云</li><li>OV5640</li>
+              <li>激光雷达</li><li>北斗定位</li><li>总线舵机</li>
+            </ul>
+          </div>
+        </article>
+
+        <!-- 项目 2 -->
+        <article class="project project-flip reveal">
+          <div class="project-media">
+            <button class="shot" type="button" data-full="assets/img/speaker-link.png"
+                    data-cap="传感器音响：电路连接与信号链路">
+              <img src="assets/img/speaker-link.png" alt="传感器音响电路连接与信号链路图" loading="lazy">
+              <span class="shot-zoom" aria-hidden="true">点击放大</span>
+            </button>
+            <div class="shot-row">
+              <button class="shot shot-sm" type="button" data-full="assets/img/field-a.jpg"
+                      data-cap="实验室外场调试随手拍">
+                <img src="assets/img/field-a.jpg" alt="实验室外场调试" loading="lazy">
+              </button>
+              <button class="shot shot-sm" type="button" data-full="assets/img/robot-hardware.jpg"
+                      data-cap="常用外设模块：通信、传感、执行">
+                <img src="assets/img/robot-hardware.jpg" alt="常用外设模块" loading="lazy">
+              </button>
+            </div>
+          </div>
+
+          <div class="project-body">
+            <p class="project-meta"><span class="badge">02</span>2026.07 ｜ 个人独立完成（硬件 + 固件）</p>
+            <h3>基于 STM32F103 的传感器音响</h3>
+            <p class="project-desc">
+              一块面包板、一颗 F103，从搭电路到写固件全部自己来：激光被挡一下就出声，还不许误触发。
+            </p>
+            <ul class="project-points">
+              <li><b>自己搭电路：</b>激光发射管配光敏电阻分压做遮挡检测，三极管驱动音乐模块发声；面包板独立排线，上电前用万用表逐路核对分压与供电；</li>
+              <li><b>写固件：</b>定时器 TRGO 硬件触发 ADC 采样（不占 CPU），定时器更新中断里累加消抖计数，ADC 完成中断置标志，主循环判阈值；</li>
+              <li><b>做验证：</b>阈值 + 迟滞 + 消抖按遮挡时长分档测试，串口打印 raw 值逐条记录，确认不误触发。</li>
+            </ul>
+            <ul class="chips">
+              <li>STM32F103C8T6</li><li>定时器 TRGO 硬件触发</li><li>ADC + 中断</li>
+              <li>阈值 · 迟滞 · 消抖</li><li>三极管驱动</li><li>USB-TTL 串口调试</li><li>万用表查电路</li>
+            </ul>
+          </div>
+        </article>
+
+        <!-- 项目 3 -->
+        <article class="project reveal">
+          <div class="project-media">
+            <button class="shot" type="button" data-full="assets/img/catia-drawing.jpg"
+                    data-cap="CATIA 工程图：三视图与尺寸标注（按国标出图）">
+              <img src="assets/img/catia-drawing.jpg" alt="CATIA 工程图三视图与尺寸标注" loading="lazy">
+              <span class="shot-zoom" aria-hidden="true">点击放大</span>
+            </button>
+            <div class="shot-row">
+              <button class="shot shot-sm" type="button" data-full="assets/img/catia-part-a.jpg"
+                      data-cap="CATIA 零件建模：阀体类零件（孔系与凸台）">
+                <img src="assets/img/catia-part-a.jpg" alt="CATIA 阀体类零件建模" loading="lazy">
+              </button>
+              <button class="shot shot-sm" type="button" data-full="assets/img/catia-part-b.jpg"
+                      data-cap="CATIA 零件建模：法兰类零件（沉孔与内腔）">
+                <img src="assets/img/catia-part-b.jpg" alt="CATIA 法兰类零件建模" loading="lazy">
+              </button>
+            </div>
+          </div>
+
+          <div class="project-body">
+            <p class="project-meta"><span class="badge">03</span>2024.11 – 2026.06 ｜ 课程实训 + 个人项目（独立完成）</p>
+            <h3>机械零部件测绘建模与结构仿真</h3>
+            <p class="project-desc">
+              从拆一台齿轮油泵量尺寸开始，到把零件全部建模、装配、出图，再到给结构件做模态分析。
+            </p>
+            <ul class="project-points">
+              <li><b>测绘建模：</b>拆开齿轮油泵实物，按先主要后次要、先外形后内腔的顺序测量并核对关联尺寸，整理出 16 个零件的建模数据；</li>
+              <li><b>建模出图：</b>用 CATIA V5 独立完成泵体、主动／从动齿轮轴、泵盖、填料压盖等 16 个零件建模与整机装配，检查干涉后输出 A3 装配图与 A4 零件图，按国标标注尺寸、配合与公差；</li>
+              <li><b>有限元分析：</b>HyperMesh 划分壳单元并设置配重（板厚 2.0 / 4.0 mm，材料 Q235A、Q345B），ABAQUS/Standard 用 Lanczos 求解自由模态，取固有频率与振型判断刚度与低频共振风险。</li>
+            </ul>
+            <ul class="chips">
+              <li>CATIA V5</li><li>装配与干涉检查</li><li>工程图出图</li><li>公差与配合</li>
+              <li>HyperMesh</li><li>ABAQUS</li><li>模态分析</li><li>Lanczos 求解</li>
+            </ul>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ================= 实拍图墙 ================= -->
+    <section class="section section-alt" id="gallery">
+      <div class="wrap">
+        <header class="section-head reveal">
+          <p class="section-kicker">Gallery</p>
+          <h2>实物、图纸、上位机界面</h2>
+          <p class="section-sub">点任意一张可以放大看细节。项目不是 PPT 里的名词，是这些照片和日志。</p>
+        </header>
+
+        <div class="gallery reveal">
+          <button class="g-item g-wide" type="button" data-full="assets/img/robot-assembly.jpg" data-cap="整机装配、内部布线与模块分层">
+            <img src="assets/img/robot-assembly.jpg" alt="整机装配与内部布线" loading="lazy">
+            <span class="g-cap">整机装配与内部布线</span>
+          </button>
+          <button class="g-item" type="button" data-full="assets/img/robot-hardware.jpg" data-cap="硬件组成：通信 / 视觉 / 定位 / 环境 / 执行">
+            <img src="assets/img/robot-hardware.jpg" alt="硬件组成" loading="lazy">
+            <span class="g-cap">硬件组成标注</span>
+          </button>
+          <button class="g-item" type="button" data-full="assets/img/robot-cloud.jpg" data-cap="阿里云操作页面与识别记录">
+            <img src="assets/img/robot-cloud.jpg" alt="阿里云操作页面" loading="lazy">
+            <span class="g-cap">阿里云上位机</span>
+          </button>
+          <button class="g-item" type="button" data-full="assets/img/field-b.jpg" data-cap="室外草地与路沿地形运行">
+            <img src="assets/img/field-b.jpg" alt="室外草地运行" loading="lazy">
+            <span class="g-cap">室外地形测试</span>
+          </button>
+          <button class="g-item" type="button" data-full="assets/img/field-a.jpg" data-cap="泥地地形运行">
+            <img src="assets/img/field-a.jpg" alt="泥地运行" loading="lazy">
+            <span class="g-cap">泥地测试</span>
+          </button>
+          <button class="g-item g-wide" type="button" data-full="assets/img/speaker-link.png" data-cap="传感器音响：电路连接与信号链路">
+            <img src="assets/img/speaker-link.png" alt="传感器音响信号链路" loading="lazy">
+            <span class="g-cap">传感器音响：从遮挡到发声的完整链路</span>
+          </button>
+          <button class="g-item" type="button" data-full="assets/img/catia-part-a.jpg" data-cap="CATIA 阀体类零件建模">
+            <img src="assets/img/catia-part-a.jpg" alt="CATIA 零件建模" loading="lazy">
+            <span class="g-cap">CATIA 零件建模</span>
+          </button>
+          <button class="g-item" type="button" data-full="assets/img/catia-drawing.jpg" data-cap="CATIA 工程图：三视图与尺寸标注">
+            <img src="assets/img/catia-drawing.jpg" alt="CATIA 工程图" loading="lazy">
+            <span class="g-cap">工程图出图</span>
+          </button>
+          <button class="g-item" type="button" data-full="assets/img/struct-assembly.jpg" data-cap="六足整机装配与可维护结构">
+            <img src="assets/img/struct-assembly.jpg" alt="整机装配结构" loading="lazy">
+            <span class="g-cap">整机结构装配</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= 技能 ================= -->
+    <section class="section" id="skills">
+      <div class="wrap">
+        <header class="section-head reveal">
+          <p class="section-kicker">Toolbox</p>
+          <h2>我手上的工具</h2>
+          <p class="section-sub">写的是能在面试里讲清楚细节的部分，夸大的词一个都没放。</p>
+        </header>
+
+        <div class="skill-grid">
+          <article class="skill-card reveal">
+            <h3><span class="ic">01</span>编程与系统</h3>
+            <ul class="chips chips-lite">
+              <li class="hl">C（熟练掌握）</li><li>Python</li><li>指针 / 结构体 / 位操作</li>
+              <li>Linux 系统开发基础</li><li>Git / GitHub</li><li>数据结构基础</li>
+            </ul>
+          </article>
+          <article class="skill-card reveal">
+            <h3><span class="ic">02</span>MCU 与 RTOS</h3>
+            <ul class="chips chips-lite">
+              <li class="hl">STM32F103 / F407 / H750</li><li>ESP32-S3</li><li>FreeRTOS 任务与队列</li>
+              <li>UART / I2C / SPI</li><li>ADC / 定时器 / DMA</li><li>中断与看门狗</li>
+            </ul>
+          </article>
+          <article class="skill-card reveal">
+            <h3><span class="ic">03</span>联网与云</h3>
+            <ul class="chips chips-lite">
+              <li class="hl">广和通 L610（Cat.1 4G）</li><li>ESP-IDF Wi-Fi</li><li>TCP / UDP 通信</li>
+              <li>自定义串口帧协议</li><li>CRC16 校验</li><li>阿里云部署与页面联调</li>
+            </ul>
+          </article>
+          <article class="skill-card reveal">
+            <h3><span class="ic">04</span>开发工具与 AI 工作流</h3>
+            <ul class="chips chips-lite">
+              <li class="hl">Keil5 / STM32CubeIDE</li><li>VS Code</li><li>Arduino IDE</li>
+              <li>CATIA / ABAQUS / Proteus</li><li>用 AI 做代码改错与方案评审</li><li>搭自己的 AI 开发工作流（vibe coding）</li>
+            </ul>
+          </article>
+          <article class="skill-card reveal">
+            <h3><span class="ic">05</span>动手与验证</h3>
+            <ul class="chips chips-lite">
+              <li class="hl">电烙铁焊接 / 查虚焊</li><li>万用表测电与通断</li><li>面包板搭电路</li>
+              <li>整机装配与结构调试</li><li>3D 打印</li><li>钳工 / 机械臂操作（金工实习）</li>
+            </ul>
+          </article>
+          <article class="skill-card skill-card-note reveal">
+            <h3><span class="ic">06</span>还在补的</h3>
+            <p class="note">
+              CAN 总线与 Modbus RTU 正在按计划做实验（硬件已到位），做完再往简历上加。
+              这里不放没跑通的东西。
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= 荣誉与经历 ================= -->
+    <section class="section section-alt" id="honors">
+      <div class="wrap">
+        <header class="section-head reveal">
+          <p class="section-kicker">Milestones</p>
+          <h2>荣誉与经历</h2>
+        </header>
+
+        <ol class="timeline">
+          <li class="reveal">
+            <span class="t-dot" aria-hidden="true"></span>
+            <time>2026.08</time>
+            <div>
+              <h3>第十三届全国大学生物联网设计竞赛 · 全国总决赛二等奖</h3>
+              <p>作品《智巡六足 AI 救援机器人》，全国 4778 支队伍参赛，晋级线下总决赛比例 6.2%。</p>
+            </div>
+          </li>
+          <li class="reveal">
+            <span class="t-dot" aria-hidden="true"></span>
+            <time>2026.07</time>
+            <div>
+              <h3>作品演示视频被模组厂商官方账号收录发布</h3>
+              <p>广和通官方 B 站账号发布《智巡六足 AI 救援机器人》演示视频（BV1Vre16rEm7）。</p>
+            </div>
+          </li>
+          <li class="reveal">
+            <span class="t-dot" aria-hidden="true"></span>
+            <time>2024 – 2026</time>
+            <div>
+              <h3>专业排名 16 / 324（前 5%）· CET-4</h3>
+              <p>能流畅阅读全英文技术文档与数据手册。</p>
+            </div>
+          </li>
+          <li class="reveal">
+            <span class="t-dot" aria-hidden="true"></span>
+            <time>2025</time>
+            <div>
+              <h3>金工实习</h3>
+              <p>钳工、3D 打印、机械臂操作，实验室里焊接与测电也是这段时间练出来的。</p>
+            </div>
+          </li>
+          <li class="reveal">
+            <span class="t-dot" aria-hidden="true"></span>
+            <time>2024.11</time>
+            <div>
+              <h3>机械零部件测绘实训</h3>
+              <p>齿轮油泵 16 个零件测绘、CATIA 建模、整机装配与工程图出图。</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ================= 联系 ================= -->
+    <section class="section" id="contact">
+      <div class="wrap">
+        <div class="cta reveal">
+          <div class="cta-copy">
+            <p class="section-kicker">Get in touch</p>
+            <h2>想聊项目细节，随时找我</h2>
+            <p class="section-sub">
+              简历、作品集、演示视频都在下面，随手点一个就行。广州、深圳随时可以当面聊。
+            </p>
+            <div class="cta-actions">
+              <a class="btn btn-primary" href="mailto:13226113617@163.com">
+                13226113617@163.com
+              </a>
+              <button class="btn btn-ghost" type="button" data-copy="13226113617@163.com">复制邮箱</button>
+              <button class="btn btn-ghost" type="button" data-copy="13226113617">复制手机号</button>
+            </div>
+            <ul class="link-row">
+              <li><a href="https://github.com/hajimi-yzy" target="_blank" rel="noopener">GitHub 仓库<span aria-hidden="true">↗</span></a></li>
+              <li><a href="https://www.bilibili.com/video/BV1Vre16rEm7/" target="_blank" rel="noopener">演示视频（B 站）<span aria-hidden="true">↗</span></a></li>
+              <li><a href="tel:13226113617">13226113617</a></li>
+            </ul>
+          </div>
+
+          <div class="cta-downloads">
+            <h3>可以直接下载</h3>
+            <a class="dl" href="assets/resume/embedded.pdf" download>
+              <span class="dl-t">简历 · 嵌入式软件工程师</span>
+              <span class="dl-s">主投版本 · PDF</span>
+            </a>
+            <a class="dl" href="assets/resume/iot.pdf" download>
+              <span class="dl-t">简历 · 物联网通信方向</span>
+              <span class="dl-s">模组厂 / 网关 / 终端联网 · PDF</span>
+            </a>
+            <a class="dl" href="assets/resume/structure.pdf" download>
+              <span class="dl-t">简历 · 结构设计工程师</span>
+              <span class="dl-s">建模出图 / 仿真方向 · PDF</span>
+            </a>
+            <a class="dl" href="assets/resume/maker-portfolio.pdf" download>
+              <span class="dl-t">作品集 · 科技小制作</span>
+              <span class="dl-s">六足机器人 + 传感器音响 · 7 页</span>
+            </a>
+            <a class="dl" href="assets/resume/structure-portfolio.pdf" download>
+              <span class="dl-t">作品集 · 结构设计</span>
+              <span class="dl-s">测绘建模 / 工程图 / 模态分析 · 7 页</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer-inner">
+      <p>© <span id="year">2026</span> 郭奕炫 · 广东技术师范大学 新能源汽车工程（师范）· 2027 届</p>
+      <p class="footer-note">本站为纯静态页面，所有照片与图纸均为本人项目实拍／实做产出。</p>
+    </div>
+  </footer>
+
+  <!-- 图片灯箱 -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="图片查看" hidden>
+    <button class="lb-close" id="lbClose" type="button" aria-label="关闭">×</button>
+    <button class="lb-nav lb-prev" id="lbPrev" type="button" aria-label="上一张">‹</button>
+    <button class="lb-nav lb-next" id="lbNext" type="button" aria-label="下一张">›</button>
+    <figure class="lb-figure">
+      <img id="lbImg" src="" alt="">
+      <figcaption id="lbCap"></figcaption>
+    </figure>
+  </div>
+
+  <button class="to-top" id="toTop" type="button" aria-label="回到顶部">↑</button>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="assets/main.js" defer></script>
+</body>
+</html>
